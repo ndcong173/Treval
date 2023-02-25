@@ -23,9 +23,9 @@ app.use(cors({
 mongoose.set('strictQuery', true)
 mongoose.connect(process.env.MONGO_URL)
 
-app.get('/test', (req, res) => {
-    res.json('test ok')
-})
+// app.get('/test', (req, res) => {
+//     res.json('test ok')
+// })
 
 app.post('/register', async (req, res) => {
     const { name, email, password } = req.body
@@ -76,6 +76,10 @@ app.get('/profile', (req,res) => {
   } else {
     res.json(null)
   }
+})
+
+app.post('/logout', (req,res) => {
+    res.cookie('token', '').json(true)
 })
 
 app.listen(3000)

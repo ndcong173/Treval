@@ -18,8 +18,7 @@ export default function LoginPage(){
             setRedirect(true)
         } catch (error) {
             alert('login fail')
-        }
-        
+        }      
     }
 
     if(redirect){
