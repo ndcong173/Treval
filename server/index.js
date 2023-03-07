@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser')
 const imageDownloader = require('image-downloader')
 const multer = require('multer')
 const fs = require('fs')
+const Place = require('./models/Place')
 
 const bcryptSalt = bcrypt.genSaltSync(12);
 const jwtSecret = 'fhniakjw3hri2ujeksadbj123nojdank'
@@ -110,6 +111,29 @@ app.post('/upload', photosMiddleware.array('photos', 100),(req,res)=>{
         uploadedFiles.push(newPath.replace('uploads',''))
     }
     res.json(uploadedFiles)
+})
+
+app.post('/places', (req, res)=>{
+  const {token} = req.cookies
+  const {title, address, addedPhoto, description, perks, extraInfo, checkIn, checkOut, maxGuests} = req.body
+    jwt.verify(token, jwtSecret, {}, async (err, userData) => {
+        if (err) throw err
+        const placesDoc = await Place.create({
+            owner: userData.id,
+            title, 
+            address, 
+            addedPhoto, 
+            description,
+            perks, 
+            extraInfo, 
+            checkIn, 
+            checkOut, 
+            maxGuests
+        })
+        res.json(placesDoc)
+    })
+
+
 })
 
 
