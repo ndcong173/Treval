@@ -18,6 +18,7 @@ export default function PlacesFormPage() {
     const [checkIn, setCheckIn] = useState('')
     const [checkOut, setCheckOut] = useState('')
     const [maxGuests, setMaxGuests] = useState(1)
+    const [price,setPrice] = useState('')
     const [redirect,setRedirect] = useState(false)
 
     useEffect(()=>{
@@ -35,6 +36,7 @@ export default function PlacesFormPage() {
             setCheckIn(data.checkIn)
             setCheckOut(data.checkOut)
             setMaxGuests(data.maxGuests)
+            setPrice(data.price)
         })
     },[id])
 
@@ -69,7 +71,7 @@ export default function PlacesFormPage() {
         const placeData = {
             title, address, addedPhotos,
             description, perks, extraInfo,
-            checkIn, checkOut, maxGuests
+            checkIn, checkOut, maxGuests, price
         }
         if(id){
             //update
@@ -102,17 +104,16 @@ export default function PlacesFormPage() {
                 {preInput('Description', 'Description of the place')}
                 <textarea 
                     value={description} 
-                    onChange={e => setDescription(e.target.value)}  
-                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' />
+                    onChange={e => setDescription(e.target.value)} />
                 {preInput('Perks', 'Select all the perks of your place')}
                 <div className="grid gap-2 mt-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                     <Perks seclected={perks} onChange={setPerks} />
                 </div>
                 {preInput('Extra infomation', 'Policy, house rules, etc.')}
                 <textarea 
+                    className="resize"
                     value={extraInfo} 
-                    onChange={e => setExtraInfo(e.target.value)}  
-                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' />
+                    onChange={e => setExtraInfo(e.target.value)} />
                 {preInput('Check in & out time', 'Add check in & out time')}
                 <div className="grid gap-2 sm:grid-cols-3">
                     <div>
@@ -128,6 +129,8 @@ export default function PlacesFormPage() {
                         <input type="number" value={maxGuests} onChange={e => setMaxGuests(e.target.value)} placeholder="" />
                     </div>
                 </div>
+                {preInput('Price', 'per night')}
+                <input type={"text"} value={price} onChange={e => setPrice(e.target.value)} placeholder={"Price/night"} />
                 <div>
                     <button className="primary my-4">Save</button>
                 </div>
