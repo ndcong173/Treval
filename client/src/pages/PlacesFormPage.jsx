@@ -94,7 +94,7 @@ export default function PlacesFormPage() {
     return (
         <div>
             <AccountNav/>
-            <form onSubmit={savePlace}>
+            <form className=" mx-28" onSubmit={savePlace}>
                 {preInput('Title', 'Title for your place.Should be short and cachy in advertisement')}
                 <input type={"text"} value={title} onChange={e => setTitle(e.target.value)} placeholder={"Title, for example: My lovely apartment"} />
                 {preInput('Address', 'Your place s address')}
@@ -106,7 +106,7 @@ export default function PlacesFormPage() {
                     value={description} 
                     onChange={e => setDescription(e.target.value)} />
                 {preInput('Perks', 'Select all the perks of your place')}
-                <div className="grid gap-2 mt-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+                <div className="grid gap-2 mt-2 grid-cols-1 lg:grid-cols-2">
                     <Perks seclected={perks} onChange={setPerks} />
                 </div>
                 {preInput('Extra infomation', 'Policy, house rules, etc.')}
