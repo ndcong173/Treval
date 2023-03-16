@@ -3,9 +3,13 @@ import Header from "./Header";
 
 export default function Layout(){
     return(
-        <div className="py-4 px-8 flex flex-col min-h-screen max-w-6xl mx-auto">
+        <div className="flex flex-col min-h-screen mx-auto">
             <Header />
-            <Outlet />
+            <div className="grid grid-cols-[1fr_4fr_1fr]">
+                <div></div>
+                <Outlet />
+                <div></div>
+            </div>
         </div>
     )
 }

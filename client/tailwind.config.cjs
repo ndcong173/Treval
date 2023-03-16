@@ -8,7 +8,10 @@ module.exports = {
     extend: {
       colors:{
         primary:'#E54853'
-      }
+      },
+      fontFamily:{
+        'serif': ['ui-serif','Autography']
+      },
     },
   },
   plugins: [],

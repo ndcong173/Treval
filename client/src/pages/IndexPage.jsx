@@ -23,7 +23,7 @@ export default function IndexPage(){
           <h2 className="font-bold">{place.address}</h2>
           <h3 className="text-sm text-gray-500">{place.title}</h3>
           <div className="mt-1">
-            <span className="font-bold text-xl text-primary">${place.price}</span>
+            <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">${place.price}</span>
             /night
           </div>
         </Link>

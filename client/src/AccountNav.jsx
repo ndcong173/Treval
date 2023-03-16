@@ -10,9 +10,9 @@ export default function AccountNav() {
         const isActive = pathname === '/account' && type === 'profile'
         let classes = 'py-2 px-6 inline-flex gap-1 rounded-full'
         if (type === subpage) {
-            classes += ' bg-primary text-white'
+            classes += ' bg-gradient-to-r from-purple-500 to-pink-500 text-white'
         } else {
-            classes += ' bg-gray-300'
+            classes += ' bg-gray-300 shadow shadow-xl'
         }
         return classes
     }

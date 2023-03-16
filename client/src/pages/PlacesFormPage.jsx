@@ -132,7 +132,7 @@ export default function PlacesFormPage() {
                 {preInput('Price', 'per night')}
                 <input type={"text"} value={price} onChange={e => setPrice(e.target.value)} placeholder={"Price/night"} />
                 <div>
-                    <button className="primary my-4">Save</button>
+                    <button className="primary bg-gradient-to-r from-purple-500 to-pink-500 my-4">Save</button>
                 </div>
             </form>
         </div>

@@ -42,7 +42,7 @@ export default function PlacePage() {
     }
 
     return (
-        <div className="mt-4 bg-gray-100 -mx-8 px-8 pt-8">
+        <div className="my-8 bg-gray-100 -mx-8 px-8 pt-8 rounded-3xl">
             <h1 className="text-2xl ">{place.title}</h1>
             <a className="my-3 font-semibold underline gap-1 flex" target='_blank' href={"https://maps.google.com/?q=" + place.address}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -79,9 +79,9 @@ export default function PlacePage() {
                 </button>
             </div>
 
-            <div className=" mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr]">
-                <div>
-                    <div className="my-4">
+            <div className=" mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr] ">
+                <div className="p-4 bg-white rounded-2xl shadow-xl">
+                    <div>
                         <h2 className=" font-semibold text-2xl">Description</h2>
                         {place.description}
                     </div>
@@ -93,7 +93,8 @@ export default function PlacePage() {
                     <BookingWidget place={place} />
                 </div>
             </div>
-            <div className="bg-white -mx-8 px-8 py-8">
+
+            <div className="bg-white rounded-2xl p-4 mb-8 shadow-xl">
                 <div>
                     <h2 className=" font-semibold text-2xl">Extra information</h2>
                 </div>
@@ -101,6 +102,7 @@ export default function PlacePage() {
                     {place.extraInfo}
                 </div>
             </div>
+            
         </div>
     )
 }

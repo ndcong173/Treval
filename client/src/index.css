@@ -1,5 +1,5 @@
 :root {
-  --primary: #F3737E ;
+  --primary: #A855f7 ;
   --secondary: #F0F5F4;
 }
 
@@ -36,4 +36,9 @@ button{
 button.primary{
   background-color: #D291BC;
   @apply bg-primary p-2 w-full text-white rounded-2xl;
+}
+
+@font-face {
+  font-family: Autography;
+  src: url(../public/fonts/Autography-DOLnW.otf);
 }
