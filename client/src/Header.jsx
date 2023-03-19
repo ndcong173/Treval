@@ -10,7 +10,7 @@ export default function Header() {
     <header className='py-4 px-8 bg-white shadow-md flex justify-between'>
       <Link to={'/'} className="flex gap-2">
         <div className="w-10">
-          <img src="navigation-icon (1).png" className=" object-fill" />
+          <img src="/navigation-icon (1).png" className=" object-fill" />
         </div>
         <span className='font-serif p-1 text-4xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500'>Treval</span>
       </Link>
