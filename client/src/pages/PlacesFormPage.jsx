@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import PhotoUploader from "../PhotoUploader";
-import Perks from "../Perks";
-import AccountNav from "../AccountNav";
+import PhotoUploader from "../components/PhotoUploader";
+import Perks from "../components/Perks";
+import AccountNav from "../components/AccountNav";
 import { Navigate, useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -90,6 +90,8 @@ export default function PlacesFormPage() {
     if(redirect){
         return <Navigate to ={'/account/places'}/>
     }
+
+    
 
     return (
         <div>
