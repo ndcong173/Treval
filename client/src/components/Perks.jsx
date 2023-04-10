@@ -15,14 +15,14 @@ export default function Perks({ seclected, onChange }) {
 
     return (
         <>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('wifi')} name='wifi' onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
                 </svg>
                 <span>Wifi</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('parking')} name='parking' onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-parking" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -31,7 +31,7 @@ export default function Perks({ seclected, onChange }) {
                 </svg>
                 <span>Free parking spot</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('pet')} name='pet' onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-paw-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -43,7 +43,7 @@ export default function Perks({ seclected, onChange }) {
                 </svg>
                 <span>Pet</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('laundry')} name='laundry' onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wash-machine" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -56,7 +56,7 @@ export default function Perks({ seclected, onChange }) {
                 </svg>
                 <span>Laundry service</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('Pool')} name="Pool" onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pool" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -69,7 +69,7 @@ export default function Perks({ seclected, onChange }) {
                 </svg>
                 <span>Swimming Pool</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('gym')} name="gym" onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-barbell" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -83,7 +83,7 @@ export default function Perks({ seclected, onChange }) {
                 </svg>
                 <span>Gym</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('bar')} name="bar" onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bottle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -93,7 +93,7 @@ export default function Perks({ seclected, onChange }) {
                 </svg>
                 <span>Bar</span>
             </label>
-            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
+            <label className=" border p-4 flex rounded-2xl gap-2 items-center cursor-pointer text-gray-300">
                 <input type="checkbox" checked={seclected.includes('smoking')} name="smoking" onChange={handleCbClick} />
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smoking" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

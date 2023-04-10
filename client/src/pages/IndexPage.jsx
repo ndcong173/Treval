@@ -22,9 +22,9 @@ export default function IndexPage() {
               <img className=" rounded-2xl aspect-square object-cover" src={'http://localhost:3000/uploads/' + place.photos[0]} alt="" />
             )}
           </div>
-          <h2 className="font-bold">{place.address}</h2>
+          <h2 className="font-bold text-gray-300">{place.address}</h2>
           <h3 className="text-sm text-gray-500">{place.title}</h3>
-          <div className="mt-1">
+          <div className="mt-1 text-gray-300">
             <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">${place.price}</span>
             /night
           </div>

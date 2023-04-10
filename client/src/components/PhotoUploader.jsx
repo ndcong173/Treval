@@ -43,8 +43,8 @@ export default function PhotoUploader({ addedPhotos, onChange }) {
     return (
         <>
             <div className="flex gap-2">
-                <input type="text" value={photoLink} onChange={e => setPhotoLink(e.target.value)} placeholder="Add using link .jpg" />
-                <button onClick={addPhotoByLink} className="bg-gray-200 px-4 gap-2 rounded-2xl ">Add&nbsp;photo</button>
+                <input className="bg-gray-800" type="text" value={photoLink} onChange={e => setPhotoLink(e.target.value)} placeholder="Add using link .jpg" />
+                <button onClick={addPhotoByLink} className=" bg-gradient-to-r from-purple-500 to-pink-500 text-gray-300 px-4 gap-2 rounded-2xl ">Add&nbsp;photo</button>
             </div>
             <div className="mt-2 gap-2 grid grid-cols-2 lg:grid-cols-4">
                 {addedPhotos.length > 0 && addedPhotos.map(link => (
@@ -69,7 +69,7 @@ export default function PhotoUploader({ addedPhotos, onChange }) {
                         </button>
                     </div>
                 ))}
-                <label className="h-32 border cursor-pointer bg-transparent flex justify-center gap-3 rounded-2xl items-center text-xl" >
+                <label className="h-32 border cursor-pointer bg-transparent flex justify-center gap-3 rounded-2xl items-center text-gray-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-none text-xl" >
                     <input type="file" multiple className="hidden" onChange={uploadPhoto} />
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m0-3l-3-3m0 0l-3 3m3-3v11.25m6-2.25h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75" />

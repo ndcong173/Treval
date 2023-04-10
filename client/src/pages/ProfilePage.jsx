@@ -34,7 +34,7 @@ export default function AccountPage() {
 
 
     return (
-        <div>
+        <div className="text-gray-300">
             <AccountNav/>
             {subpage === undefined && (
                 <div className=" text-center max-w-lg mx-auto">

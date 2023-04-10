@@ -13,10 +13,10 @@ export default function BookingOrder() {
 }, [])
 
   return (
-    <div>
+    <div >
         <AccountNav />
         {bookings.length > 0 && bookings.map(booking =>(
-            <div className='bg-gray-300 my-4 p-4 rounded-2xl'>
+            <div className='bg-gray-800 my-4 p-4 rounded-2xl text-gray-300'>
                 <h1 className='text-xl font-bold'>{booking.place.title}</h1>
                 <div className='text-sm text-gray-500'>{booking.place.address}</div>
                 <div>Booking creator: {booking.user.name}</div>

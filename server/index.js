@@ -46,19 +46,22 @@ function getUserDataFromReq(req) {
   });
 }
 
-app.post("/register", async (req, res) => {
-  const { name, email, password } = req.body;
+app.post('/register', async (req, res) => {
+  const { name, email, password, role } = req.body
+
   try {
-    const userDoc = await User.create({
-      name,
-      email,
-      password: bcrypt.hashSync(password, bcryptSalt),
-    });
-    res.json(userDoc);
+      const userDoc = await User.create({
+          name,
+          email,
+          password: bcrypt.hashSync(password, bcryptSalt),
+          role,
+      })
+      res.json(userDoc)
   } catch (error) {
-    res.status(422).json(e);
+      res.status(422).json(error)
   }
-});
+})
+
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const userDoc = await User.findOne({ email });

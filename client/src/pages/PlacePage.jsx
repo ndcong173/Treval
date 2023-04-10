@@ -23,13 +23,13 @@ export default function PlacePage() {
     
 
     return (
-        <div className="my-8 bg-gray-100 -mx-8 px-8 pt-8 rounded-3xl">
-            <h1 className="text-2xl ">{place.title}</h1>
+        <div className="my-8 bg-gray-800 -mx-8 px-8 pt-8 rounded-3xl">
+            <h1 className="text-2xl text-gray-300">{place.title}</h1>
             <AddressLink >{place.address}</AddressLink>
             <Gallery place={place}/>
             <div className=" mt-8 mb-8 gap-8 grid grid-cols-1 md:grid-cols-[2fr_1fr] ">
-                <div className="p-4 bg-white rounded-2xl shadow-xl">
-                    <div>
+                <div className="p-4 bg-gray-900 rounded-2xl shadow-xl text-gray-300">
+                    <div className="text-gray-300">
                         <h2 className=" font-semibold text-2xl">Description</h2>
                         {place.description}
                     </div>
@@ -42,11 +42,11 @@ export default function PlacePage() {
                 </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-4 mb-8 shadow-xl">
+            <div className="bg-gray-900 rounded-xl p-4 mb-8 shadow-xl">
                 <div>
-                    <h2 className=" font-semibold text-2xl">Extra information</h2>
+                    <h2 className=" font-semibold text-2xl text-gray-300">Extra information</h2>
                 </div>
-                <div className="mb-4 mt-1 text-sm text-gray-700 leading-5">
+                <div className="mb-4 mt-1 text-sm text-gray-500 leading-5">
                     {place.extraInfo}
                 </div>
             </div>

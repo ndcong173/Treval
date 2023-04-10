@@ -26,23 +26,25 @@ export default function LoginPage(){
     }
 
     return (
-        <div className="mt-4 flex grow items-center justify-around">
+        <div className="mt-4 flex grow items-center justify-around text-gray-300">
             <div className="mb-16">
                 <h1 className="text-4xl text-center mb-4" >Login</h1>
                 <form className=" max-w-md mx-auto" onSubmit={handleLogin}>
                     <input 
+                        className="bg-gray-800 border-none my-2"
                         type="email" 
                         placeholder="your@email.com"
                         value={email}
                         onChange={e=> setEmail(e.target.value)}/>
                     <input
+                        className="bg-gray-800 border-none my-2"
                         type="password"
                         placeholder="password"
                         value={password}
                         onChange={e=> setPassword(e.target.value)}/>    
-                    <button className="primary">Login</button>
+                    <button className="primary bg-gradient-to-r from-purple-500 to-pink-500 my-2">Login</button>
                     <div className="text-center py-2">
-                        Don't have an account yet? <Link className="underline text-black" to={'/register'}>Register now!</Link>
+                        Don't have an account yet? <Link className="underline bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500" to={'/register'}>Register now!</Link>
                     </div>                    
                 </form>  
             </div>  
